@@ -2,8 +2,8 @@ using Microsoft.EntityFrameworkCore;
 using P1_AP1_VictorManuel.Components;
 using P1_AP1_VictorManuel.Dal;
 
-namespace P1_AP1_VictorManuel
-{
+namespace P1_AP1_VictorManuel;
+
     public class Program
     {
         public static void Main(string[] args)
@@ -43,4 +43,4 @@ namespace P1_AP1_VictorManuel
             app.Run();
         }
     }
-}
+
