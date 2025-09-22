@@ -1,4 +1,6 @@
+using Microsoft.EntityFrameworkCore;
 using P1_AP1_VictorManuel.Components;
+using P1_AP1_VictorManuel.Dal;
 
 namespace P1_AP1_VictorManuel
 {
@@ -12,6 +14,10 @@ namespace P1_AP1_VictorManuel
             builder.Services.AddRazorComponents()
                 .AddInteractiveServerComponents();
 
+
+            var ConStr = builder.Configuration.GetConnectionString("SqlConStr");
+
+            builder.Services.AddDbContextFactory<Contexto>(o => o.UseSqlite(ConStr));
             
 
             var app = builder.Build();
