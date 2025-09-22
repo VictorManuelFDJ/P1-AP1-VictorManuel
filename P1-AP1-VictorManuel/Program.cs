@@ -12,6 +12,8 @@ namespace P1_AP1_VictorManuel
             builder.Services.AddRazorComponents()
                 .AddInteractiveServerComponents();
 
+            
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -24,7 +26,9 @@ namespace P1_AP1_VictorManuel
 
             app.UseHttpsRedirection();
 
+            
             app.UseAntiforgery();
+            
 
             app.MapStaticAssets();
             app.MapRazorComponents<App>()
