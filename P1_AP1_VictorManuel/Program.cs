@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using P1_AP1_VictorManuel.Components;
 using P1_AP1_VictorManuel.Dal;
+using P1_AP1_VictorManuel.Services;
 
 namespace P1_AP1_VictorManuel;
 
@@ -18,8 +19,8 @@ namespace P1_AP1_VictorManuel;
             var ConStr = builder.Configuration.GetConnectionString("SqlConStr");
 
             builder.Services.AddDbContextFactory<Contexto>(o => o.UseSqlite(ConStr));
-            
 
+            builder.Services.AddScoped<RegistroServices>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
