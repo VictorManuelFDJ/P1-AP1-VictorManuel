@@ -3,7 +3,7 @@
 namespace P1_AP1_VictorManuel.Models;
 
 
-    public class Registros
+    public class EntradaHuacales
     {
         [Key]
         public int Id { get; set; }

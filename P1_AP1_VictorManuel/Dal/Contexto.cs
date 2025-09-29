@@ -7,6 +7,6 @@ namespace P1_AP1_VictorManuel.Dal;
     {
         public Contexto(DbContextOptions<Contexto> options) : base(options) { }
      
-        public DbSet<Registros> Registros { get; set; }
+        public DbSet<EntradaHuacales> Registros { get; set; }
     }
 

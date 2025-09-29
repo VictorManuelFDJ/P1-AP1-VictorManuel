@@ -7,7 +7,7 @@ namespace P1_AP1_VictorManuel.Services;
 
 public class RegistroServices(IDbContextFactory<Contexto> DbFactory)
 {
-    public async Task<List<Registros>> Listar(Expression<Func<Registros, bool>> criterio) 
+    public async Task<List<EntradaHuacales>> Listar(Expression<Func<EntradaHuacales, bool>> criterio) 
     {
         await using var contexto = await DbFactory.CreateDbContextAsync();
         return await contexto.Registros
